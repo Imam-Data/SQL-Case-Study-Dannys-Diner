@@ -1,31 +1,27 @@
-# 🍜 SQL Case Study: Danny's Diner
+# SQL Case Study: Danny's Diner Analysis
 
-## 📖 Background
-Danny seriously loves Japanese food and decided to open up a very cute little restaurant that sells his 3 favorite foods: sushi, curry, and ramen. Danny’s Diner is in need of assistance to help the restaurant stay afloat - the restaurant has captured some very basic data from their few months of operation but have no real idea how to use their data to help them run the business.
+## Project Overview
+Analysis of customer behavior and restaurant operations for Danny’s Diner using MySQL. This project transforms raw transactional data into business insights regarding spending, loyalty, and menu performance.
 
-## 🛠️ Project Goals
-The main objective of this project is to use the dataset to answer a few simple questions about the customers, especially about their:
-- Visiting patterns.
-- Total amount of money spent.
-- Favorite menu items.
+## Analytical Process
+The analysis followed a structured workflow to ensure data accuracy and logical consistency:
+- **Data Integration**: Joined transactional datasets (`sales`) with reference tables (`menu`, `members`) using primary/foreign key relationships.
+- **Logic Implementation**: Developed complex calculations using `CASE WHEN` to handle dynamic business rules, such as loyalty point multipliers.
+- **Data Ranking**: Utilized Window Functions (`DENSE_RANK`) to identify first-time purchases and favorite items without losing data on ties.
+- **Optimization**: Used Common Table Expressions (CTEs) to break down multi-step queries into readable, modular blocks.
 
-## 💻 Tech Stack & Skills
-- **Database:** MySQL
-- **SQL Concepts Used:** - Basic Aggregations (`SUM`, `COUNT`, `DISTINCT`).
-  - Joins (Joining multiple tables).
-  - Common Table Expressions (CTEs).
-  - Window Functions (`DENSE_RANK`, `RANK`).
-  - Conditional Logic (`CASE WHEN`).
+## Applied Skills
+- **Joins**: Inner Joins for data merging.
+- **Aggregations**: `SUM`, `COUNT`, `DISTINCT` for revenue and visit metrics.
+- **Window Functions**: `DENSE_RANK`, `PARTITION BY`.
+- **Logic Control**: `CASE WHEN`, `BETWEEN`, `DATE_ADD`.
 
-## 📂 Repository Structure
-- `schema.sql`: Contains all the table creation and data insertion scripts.
-- `analysis.sql`: Contains the SQL queries and solutions for all 10 business questions.
-- `README.md`: Project documentation (this file).
+## Repository Content
+- `schema.sql`: Database definition and data insertion scripts.
+- `analysis.sql`: SQL solutions for 10 core business questions.
+- `README.md`: Project documentation.
 
----
-## 🚀 Key Insights
-- **Customer Loyalty:** Customer A is the most frequent visitor and highest spender.
-- **Popular Item:** Ramen is the most popular item across all customers.
-- **Member Program:** Point incentives (2x multiplier) significantly impact customer behavior during the first week of membership.
-
-*Solved by a Future Data Analyst 🚀*
+## Key Findings
+- **Retention**: Customer A is the top spender and most frequent visitor.
+- **Product**: Ramen is the most popular menu item based on order volume.
+- **Membership**: Loyalty programs show a significant increase in points generated during the first week of enrollment.
