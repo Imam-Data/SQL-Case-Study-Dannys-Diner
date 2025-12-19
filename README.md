@@ -17,9 +17,9 @@ The analysis followed a structured workflow to ensure data accuracy and logical 
 - **Logic Control**: `CASE WHEN`, `BETWEEN`, `DATE_ADD`.
 
 ## Repository Content
-- `schema.sql`: Database definition and data insertion scripts.
-- `analysis.sql`: SQL solutions for 10 core business questions.
-- `README.md`: Project documentation.
+- [schema.sql](schema.sql): Database definition and data insertion scripts.
+- [analysis.sql](analysis.sql): SQL solutions for 10 core business questions.
+- [README.md](README.md): Project documentation.
 
 ## Key Findings
 - **Retention**: Customer A is the top spender and most frequent visitor.
